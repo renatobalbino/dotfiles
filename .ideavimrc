@@ -1,0 +1,27 @@
+imap jj <Esc>
+set timeout=1000
+set relativenumber
+set number
+
+" search
+set nohlsearch " no highlight
+set incsearch " incremental
+set ignorecase " case insensitive search
+set smartcase " upper case search only matches uppercase
+
+let mapleader = ","
+
+nnoremap <leader>d :action GotoDeclaration<CR>
+nnoremap <leader>s :action GotoSuperMethod<CR>
+nnoremap <leader>i :action GotoImplementation<CR>
+nnoremap <leader>b :action JumpToLastChange<CR>
+
+nnoremap R :action RenameElement<CR>
+
+nnoremap == :action ReformatCode<CR>
+vnoremap == :action ReformatCode<CR>
+
+nnoremap <leader>w :action GotoSurroundWith<CR>
+vnoremap <leader>w :action GotoSurroundWith<CR>
+nnoremap <leader>t :action RefactoringMenu<CR>
+vnoremap <leader>t :action RefactoringMenu<CR>
